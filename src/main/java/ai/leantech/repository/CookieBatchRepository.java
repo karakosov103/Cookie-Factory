@@ -1,9 +1,9 @@
 package ai.leantech.repository;
 
-import ai.leantech.model.Cookie;
+import ai.leantech.model.CookieBatch;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CookieRepository extends JpaRepository<Cookie, Long> {
+public interface CookieBatchRepository extends JpaRepository<CookieBatch, Long> {
 }

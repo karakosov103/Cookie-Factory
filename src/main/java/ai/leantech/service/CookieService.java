@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 import javax.persistence.EntityNotFoundException;
 
 @Service
-public class ServiceCookie {
+public class CookieService {
     private final CookieRepository repository;
     private final CookieConverter cookieConverter;
 
-    public ServiceCookie(CookieRepository repository, CookieConverter cookieConverter) {
+    public CookieService(CookieRepository repository, CookieConverter cookieConverter) {
         this.repository = repository;
         this.cookieConverter = cookieConverter;
     }

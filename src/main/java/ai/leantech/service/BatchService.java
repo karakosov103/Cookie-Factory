@@ -5,10 +5,10 @@ import ai.leantech.repository.BatchRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ServiceBatch {
+public class BatchService {
     private final BatchRepository batchRepository;
 
-    public ServiceBatch(BatchRepository batchRepository) {
+    public BatchService(BatchRepository batchRepository) {
         this.batchRepository = batchRepository;
     }
 
