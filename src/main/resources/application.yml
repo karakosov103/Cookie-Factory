@@ -11,8 +11,16 @@ spring:
     database-platform: postgres
     properties:
         hibernate:
+          jdbc:
+            lob:
+              non_contextual_creation: true
           dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 enabled: true
 flyway:
   user: postgres

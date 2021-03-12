@@ -1,13 +1,14 @@
 package ai.leantech.dto;
 
+import java.time.ZonedDateTime;
 import java.util.Date;
 
 public class TaskCreateCookieResponse {
     private long taskId;
     private long cookieId;
     private float weight;
-    private Date createdTime;
-    private Date updateTime;
+    private ZonedDateTime createdTime;
+    private ZonedDateTime updateTime;
     private String status;
 
     public long getTaskId() {
@@ -34,19 +35,19 @@ public class TaskCreateCookieResponse {
         this.weight = weight;
     }
 
-    public Date getCreatedTime() {
+    public ZonedDateTime getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(Date createdTime) {
+    public void setCreatedTime(ZonedDateTime createdTime) {
         this.createdTime = createdTime;
     }
 
-    public Date getUpdateTime() {
+    public ZonedDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(ZonedDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

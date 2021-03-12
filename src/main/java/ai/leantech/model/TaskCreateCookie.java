@@ -3,6 +3,7 @@ package ai.leantech.model;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -15,9 +16,9 @@ public class TaskCreateCookie {
     private long taskId;
     private float weight;
     @Column(name="created_time")
-    private Date createdTime;
+    private ZonedDateTime createdTime;
     @Column(name="update_time")
-    private Date updateTime;
+    private ZonedDateTime updateTime;
     private String status;
 
     @OneToOne
@@ -49,19 +50,19 @@ public class TaskCreateCookie {
         this.weight = weight;
     }
 
-    public Date getCreatedTime() {
+    public ZonedDateTime getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(Date createdTime) {
+    public void setCreatedTime(ZonedDateTime createdTime) {
         this.createdTime = createdTime;
     }
 
-    public Date getUpdateTime() {
+    public ZonedDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(ZonedDateTime updateTime) {
         this.updateTime = updateTime;
     }
 

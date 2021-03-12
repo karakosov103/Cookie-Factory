@@ -26,6 +26,6 @@ public class CookieController {
 
     @PutMapping
     public BatchResponse addTaskCreateCookie(@RequestBody BatchRequest request){
-        return taskCreateCookieService.add(request);
+        return taskCreateCookieService.addTask(request);
     }
 }

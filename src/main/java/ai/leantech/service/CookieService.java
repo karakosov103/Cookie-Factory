@@ -8,6 +8,7 @@ import ai.leantech.repository.CookieRepository;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 
 @Service
 public class CookieService {
@@ -34,5 +35,12 @@ public class CookieService {
     public Cookie getById(Long id){
         return repository.findById(id)
                  .orElseThrow(() -> new EntityNotFoundException(String.format("Cookie with id %s not exists", id)));
+    }
+
+    public void cookiesIsExist(List<Long> list){
+        for(Long id: list) {
+            repository.findById(id)
+                    .orElseThrow(() -> new EntityNotFoundException(String.format("Cookie with id %s not exists", id)));
+        }
     }
 }

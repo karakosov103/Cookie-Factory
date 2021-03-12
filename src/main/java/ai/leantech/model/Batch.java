@@ -3,6 +3,7 @@ package ai.leantech.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,8 +14,8 @@ public class Batch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name="time_create")
-    private Date timeCreate;
+    @Column(name="created_time")
+    private ZonedDateTime createdTime;
     @OneToOne(mappedBy = "batch")
     @JsonBackReference
     private TaskCreateCookie taskCreateCookie;
@@ -38,12 +39,12 @@ public class Batch {
         this.id = id;
     }
 
-    public Date getTimeCreate() {
-        return timeCreate;
+    public ZonedDateTime getCreatedTime() {
+        return createdTime;
     }
 
-    public void setTimeCreate(Date timeCreate) {
-        this.timeCreate = timeCreate;
+    public void setCreatedTime(ZonedDateTime createdTime) {
+        this.createdTime = createdTime;
     }
 
     public TaskCreateCookie getTaskCreateCookie() {
